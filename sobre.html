@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación de Boda</title>
+  <!-- Animations CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- WOW.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <link rel="stylesheet" href="sobre.css">
+</head>
+
+<body>
+
+  <div class="pre-page" id="pre_page">
+    <img src="mw-welcome-graph-left.svg" class="left-graph wow fadeInUp" data-wow-delay="1.5s" id="left-graph">
+    <img src="mw-welcome-graph-right.svg" class="right-graph wow fadeInDown" data-wow-delay="1.5s" id="right-graph">
+    <img src="mw-env-middle-layer.png" class="envelope wow fadeIn" data-wow-delay="1.5s" id="env_middle">
+    <img src="mw-env-bottom-layer.png" class="envelope wow slideInUp" data-wow-delay="1.5s" id="env_bottom">
+    <img src="mw-env-top-layer.png" class="envelope wow slideInDown" data-wow-delay="1.5s" id="env_top">
+    
+    <div class="inner wow fadeIn" data-wow-delay="1.5s" id="inner_elements">
+      <span class="icon">
+          <div class="pre-page-content">
+              <br><br>
+              <p class="welcome-text">Hugo &amp; Majo</p>
+              <p class="welcome-text-p">Se casan y te invitan a celebrar con ellos este gran día.</p>
+              <br>
+          </div>
+          <a>
+            <img src="wax-seal.png" class="welcome-element stamp animate-zoom-in-out" onclick="redirectToIndex()">
+        </a>
+        
+        
+      </span>
+    </div>
+  </div>
+  
+  
+  <script src="sobre.js">
+   
+  </script>
+
+<script> new WOW({animateClass: 'animate__animated'}).init();</script>
+</body>
+
+</html>
