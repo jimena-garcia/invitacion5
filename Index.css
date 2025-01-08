@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+.crucifijo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-width: 40px; /* Ajusta este valor según el tamaño deseado */
+  max-height: 40px; /* Ajusta este valor según el tamaño deseado */
+}
+
 body {
   font-family: 'Poiret One', serif;
   color: #fff; /* Texto blanco por defecto */
