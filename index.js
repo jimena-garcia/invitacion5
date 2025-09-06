@@ -4,7 +4,7 @@ window.onload = function () {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const countdownDate = new Date("February 1, 2025 00:00:00").getTime();
+  const countdownDate = new Date("February 9, 2026 00:00:00").getTime();
 
   const updateCountdown = () => {
     const now = new Date().getTime();

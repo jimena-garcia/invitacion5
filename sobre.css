@@ -163,77 +163,84 @@
   }
   
   /*------------------ Gráficos Laterales ---------------------*/
-  .pre-page .left-graph,
-  .pre-page .right-graph {
-    position: absolute;
-    z-index: 11;
-    height: 100vh;
-  }
-  
-  .pre-page .left-graph {
-    bottom: 0px;
-    left: 0px;
-  }
-  
-  .pre-page .right-graph {
-    top: 0px;
-    right: 0px;
-  }
-  
-  /*------------------ Capas de Sobre ---------------------*/
-  #env_top,
-  #env_bottom,
-  #env_middle {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-    overflow: visible;
-  }
-  
-  #env_top {
-    top: 0;
-    right: 0;
-    animation: slideInDown 2s ease;
-  }
-  
-  #env_bottom {
-    bottom: 0;
-    right: 0;
-    animation: slideInUp 2s ease;
-  }
-  
-  #env_middle {
-    top: 0;
-    right: 0;
-    object-fit: fill;
-    animation: fadeIn 2s ease;
-  }
+.pre-page .left-graph,
+.pre-page .right-graph {
+  position: absolute;
+  z-index: 11;
+  height: 100vh;
+  /* Agregar estas líneas para ocultarlos inicialmente */
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 1s; /* Retraso para que aparezcan después del sobre */
+}
+
+.pre-page .left-graph {
+  bottom: 0px;
+  left: 0px;
+}
+
+.pre-page .right-graph {
+  top: 0px;
+  right: 0px;
+}
+
+/*------------------ Capas de Sobre ---------------------*/
+#env_top,
+#env_bottom,
+#env_middle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  overflow: visible;
+}
+
+#env_top {
+  top: 0;
+  right: 0;
+  animation: slideInDown 2s forwards ease; 
+}
+
+#env_bottom {
+  bottom: 0;
+  right: 0;
+  animation: slideInUp 2s forwards ease;
+}
+
+#env_middle {
+  top: 0;
+  right: 0;
+  object-fit: fill;
+  animation: fadeIn 2s forwards ease; 
+}
   
   @media (max-width: 991px) {
-    .pre-page {
-      display: flex;
-      justify-content: center;
-    }
-    .pre-page .right-graph {
-      content: url(mw-welcome-graph-right.svg);
-      height: 50vh;
-    }
-    .pre-page .left-graph {
-      content: url(mw-welcome-graph-left.svg);
-      height: 50vh;
-    }
-    #env_top,
-    #env_bottom {
-      height: 35vh;
-      width: 100%;
-      margin: auto;
-      object-fit: cover;
-    }
-    #env_middle {
-      display: none;
-    }
+  .pre-page {
+    display: flex;
+    justify-content: center;
   }
+  .pre-page .right-graph {
+    content: url(mw-welcome-graph-right.svg);
+    height: 50vh;
+    opacity: 0; 
+  }
+  .pre-page .left-graph {
+    content: url(mw-welcome-graph-left.svg);
+    height: 50vh;
+    opacity: 0; 
+  }
+  #env_top,
+  #env_bottom {
+    height: 35vh;
+    width: 100%;
+    margin: auto;
+    object-fit: cover;
+    opacity: 0;
+  }
+  #env_middle {
+    display: none;
+  }
+}
 
   .fade-out {
   animation: fadeOut 1s forwards;
